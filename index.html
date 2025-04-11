@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A Sarath Kumar – Resume</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/your-actual-fontawesome-kit.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- theme toggle -->
+  <input type="checkbox" id="theme-toggle" hidden>
+  <label for="theme-toggle" class="theme-switch" aria-label="Toggle theme">
+    <i class="fas fa-moon"></i>
+    <i class="fas fa-sun"></i>
+  </label>
+
+  <!-- back to top -->
+  <button class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+  <div class="container">
+    <header class="hero">
+      <h1>A Sarath Kumar</h1>
+      <p class="subtitle">IIM Bangalore (BBA-DBE) {Student} | BBA LLB (Hons) {Student} | Website Developer | Pianist (Grade 5)</p>
+      <p class="contact">✉️ sarath2500kumar@gmail.com  | 📞 +91‑73064788xx</p>
+      <a href="mailto:sarath@example.com" class="btn contact-btn">Contact Me</a>
+      <a href="A_Sarath_Kumar_Resume.pdf" class="btn" download>Download Resume (PDF)</a>
+    </header>
+
+    <nav class="navbar">
+      <a href="#summary">Summary</a>
+      <a href="#education">Education</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#publications">Publications</a>
+      <a href="#achievements">Achievements</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <main>
+      <section id="summary" class="section">
+        <h2>Summary</h2>
+        <p>Ambitious & a budding multi‑qualified professional with business acumen, 
+          legal insight, and creative flair in music. Passionate about entrepreneurship, corporate strategy, and innovation.</p>
+      </section>
+
+      <section id="education" class="section">
+        <h2>Education</h2>
+        <ul class="list">
+          <li><strong>IIM Bangalore</strong> – BBADBE (Student)</li>
+          <li><strong>Government Law College, Thrissur</strong> – BBA LLB (Hons) (Student)</li>
+          <li><strong>Website Development Course (Coursera)</strong> – Website Developer</li>
+        </ul>
+      </section>
+
+      <section id="experience" class="section">
+        <h2>Experience</h2>
+        <ul class="list">
+          <li><strong>Joy & Joy Associates – Law Intern (2024):</strong> Assisted on corporate & maritime law cases; observed courtroom procedures and statute interpretation.</li>
+          <li><strong>KSIDC – Law & Finance Intern (2023):</strong> Analyzed loan proposals for SMEs; studied legal frameworks governing industrial finance.</li>
+          <li><strong>High Court of Kerala – Intern (2022):</strong> Researched case law, drafted memos, and observed oral arguments to sharpen legal reasoning.</li>
+          <li><strong>Technopark Trivandrum – Legal & Management Intern (2021):</strong> Studied land acquisition cases & governance structure of India’s largest IT park society.</li>
+          <li><strong>KFC – Legal & Finance Intern:</strong> Reviewed legal manuals; gained insight into NBFC regulations under Companies Act 2013.</li>
+        </ul>
+      </section>
+
+      <section id="skills" class="section">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-bar"><span>Corporate Law</span><div class="bar"><div class="fill" style="--pct:90%"></div></div></div>
+          <div class="skill-bar"><span>Business Strategy</span><div class="bar"><div class="fill" style="--pct:85%"></div></div></div>
+          <div class="skill-bar"><span>Digital Marketing</span><div class="bar"><div class="fill" style="--pct:75%"></div></div></div>
+          <div class="skill-bar"><span>Content Creation</span><div class="bar"><div class="fill" style="--pct:80%"></div></div></div>
+          <div class="skill-bar"><span>Piano Composition</span><div class="bar"><div class="fill" style="--pct:70%"></div></div></div>
+        </div>
+      </section>
+
+      <section id="publications" class="section">
+        <h2>Publications</h2>
+        <ul class="list">
+          <li><em>Proud But Never Satisfied</em> (Self‑Published)</li>
+          <li>Published Legal Research Papers for Lawoctopus</li>
+        </ul>
+      </section>
+
+      <section id="achievements" class="section">
+        <h2>Achievements</h2>
+        <ul class="list">
+          <li>Trinity College London – Grade 5 Pianist</li>
+          <li>All India Moot Court Competition Second Runner Up (Bangalore Law University)</li>
+        </ul>
+      </section>
+
+      <section id="contact" class="section">
+        <h2>Contact</h2>
+        <form class="contact-form" action="mailto:sarath@example.com" method="POST" enctype="text/plain">
+          <div class="field">
+            <input type="text" required>
+            <label>Name</label>
+          </div>
+          <div class="field">
+            <input type="email" required>
+            <label>Email</label>
+          </div>
+          <div class="field">
+            <textarea rows="4" required></textarea>
+            <label>Message</label>
+          </div>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 A Sarath Kumar. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script>
+    document.querySelectorAll('.navbar a').forEach(a => {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        document.querySelector(a.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    const topBtn = document.querySelector('.back-to-top');
+    window.addEventListener('scroll', () => {
+      topBtn.style.display = window.scrollY > 50 ? 'block' : 'none';
+    });
+    topBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    const toggle = document.getElementById('theme-toggle');
+    toggle.addEventListener('change', () => {
+      document.body.classList.toggle('dark-theme');
+    });
+  </script>
+</body>
+</html>
